@@ -1,0 +1,36 @@
+<html ng-app="phonecatApp">
+<head>
+  <script src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+</head>
+<body ng-controller="PhoneListCtrl">
+
+  <h2>Angular.js JSON Fetching Example</h2>
+
+    <table>
+
+      <tr>
+
+        <th>Code</th>
+
+        <th>Country</th>
+
+        <th>Population</th>
+
+      </tr>
+
+      <tr ng-repeat="country in countries | orderBy: 'code' ">
+
+        <td>{{country.code}}</td>
+
+        <td>{{country.name}}</td>
+
+        <td>{{country.population}}</td>
+
+      </tr>
+
+    </table>
+
+    <script src="js/controllers.js"></script>
+</body>
+</html>
