@@ -1,0 +1,74 @@
+.cp-extend{
+	display: block;
+}
+
+.row .col.custom{
+	float: none;
+}
+
+
+.btn, .btn-large, .btn-flat{
+	padding: 0 3rem;
+}
+
+.row .col.center{
+	width: 100%;
+    text-align: center;
+}
+
+img.responsive-img, video.responsive-video.stylelogo{
+	   margin-left: 30px;
+}
+
+
+img.responsive-img.test{
+	max-width: 92%;
+}
+
+
+.style{
+	font-family: robotFontBold;
+}
+
+.stylev2{
+	font-family: robotFontThin;
+	text-decoration: line-through;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea.margintext{
+	margin-left: 15px;
+}
+
+
+nav .brand-logo.style{
+	text-decoration: line-through;
+	padding-left: 20px;
+	font-family: robotFontThin;
+}
+
+.fa-2x.style{
+	color: #c62828 ;
+    padding-bottom: 450%;
+    padding-top: 0;
+}
+
+
+
+
+
+@font-face {
+    font-family: robotFontlight;
+    src: url('../bower_components/Materialize/dist/font/roboto/Roboto-Light.woff2');
+}
+
+@font-face {
+    font-family: robotFontBold;
+    src: url('../bower_components/Materialize/dist/font/roboto/Roboto-Bold.woff2');
+}
+@font-face {
+    font-family: robotFontThin;
+    src: url('../bower_components/Materialize/dist/font/roboto/Roboto-Thin.woff2');
+}
+
+
+

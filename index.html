@@ -5,70 +5,50 @@
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	
+    <link rel="stylesheet" type="text/css" href="bower_components/Materialize/dist/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.css">
+		<!-- // <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	 -->
 
 </head>
 <body>
 
-		<h1>TODO LIST</h1>
-<!-- 		<input type="submit" value="Add" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"> -->
-   <input id="saveTodo" type="submit" value="Add" class="btn btn-info btn-lg" data-toggle="modal">
-<!-- 			<div class="modal fade" id="myModal" role="dialog">
-    			<div class="modal-dialog modal-sm">
-      				<div class="modal-content">
-        				<div class="modal-header">
-				          <button type="button" class="close" data-dismiss="modal">&times;</button>
-				          <h4 class="modal-title">Add Todo</h4>
-        				</div>
-        				<div class="modal-body">
-          					<form>
-          						<label>Todo:</label>
-          						<input id="getTodo" type="text" name="todo">
-          					</form>
-        				</div>
-        				<div class="modal-footer">
-        					<button id="saveTodo"type="button" class="btn btn-default" data-dismiss="modal">Save</button>
-          					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        				</div>
-        			</div>
-      			</div>
-   			</div> -->
 
-		<input id="hideTodo" type="submit" value="Hide" class="btn btn-info btn-lg" data-toggle="modal">
 
-		<div class="modal fade" id="updateModal" role="dialog" >
-    			<div class="modal-dialog modal-sm">
-      				<div class="modal-content">
-        				<div class="modal-header">
-				          <button type="button" class="close" data-dismiss="modal">&times;</button>
-				          <h4 class="modal-title">Update Todo</h4>
-        				</div>
-        				<div class="modal-body">
-          					<form>
-          						Todo:
-          						<input id="updateTodo" type="text" name="todo">
-          					</form>
-        				</div>
-        				<div class="modal-footer">
-        					<button id="saveUpdateTodo"type="button" class="btn btn-default" data-dismiss="modal">Save</button>
-          					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        				</div>
-        			</div>
-      			</div>
-   			</div>
+
+<nav>
+  <div class="nav-wrapper">
+    <a href="" class="brand-logo style">TODO</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href=""></a></li>
+      <li><a href=""></a> </li>
+      <li><a href=""></a></li>
+    </ul>
+  </div>
+</nav>
+
+ <div class="container">
+        <!-- Page Content goes here -->
+
+
+		<h1 class="style">TODO <span class="stylev2">LIST</span></h1>
+
+    <a class="waves-effect waves-light btn" id="saveTodo" value="Add" ><i class="fa fa-pencil left"></i>Add</a>
+
+    <a class="waves-effect waves-light btn" id="hideTodo"><i class="fa fa-angle-double-down left"></i>Hide</a>    
 
 
 	<table id="todoTable">
 		<tbody>
-
 		</tbody>
-	</table>
+	</table> 
 
-
+  <script type="text/javascript" src="bower_components/Materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="mainjs/main.js"></script>
 
 </body>

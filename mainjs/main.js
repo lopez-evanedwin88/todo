@@ -8,10 +8,12 @@
 			var setID = $("#todoTable tbody tr").length;	
 	  			// $("#todoTable tbody").append('<tr id ="todoID'+setID+'">'+ '<td>'+ todoName + '</td>'+ '<td><input class="editTodo" type="button" value="Edit"></td> <td><input class="doneTodo" type="submit" value="Done"></td></tr>');
 
-	  			$("#todoTable tbody").append('<tr id ="todoID'+setID+'">'+ '<td><input type="text"/></td>'+ '<td> <input id=saved'+setID+' class="btn btn-info btn-lg" type="button" value="Save"></td> <td><input id=TodoCancel'+setID+' class="btn btn-info btn-lg" type="submit" value="Cancel"></td></tr>');
+	  			$("#todoTable tbody").append('<tr class="card-panel cp-extend row" id =todoID'+setID+'">'+'<td class="col custom s12 m4 l2"><img src="./saitama.jpg" alt="" class="circle responsive-img"></img></td><td class="col custom s12 m4 l8 center"><input type="text" class="textmargin"/></td>'+ '<td class="col custom s12 m4 l2"><a class="waves-effect waves-light btn" id=saved'+setID+'><i class="fa fa-floppy-o center"></i></a></td> <td class="col custom s12 m4 l2"><a class="waves-effect waves-light btn" id=TodoCancel'+setID+'><i class="fa fa-times center"></i></a></td></td> <td><i class="fa fa-thumb-tack fa-2x style"></i></td></tr>');
 				// var temp = $("#todoTable tbody tr").attr('id');
 				$('#saved'+setID).bind("click",Save);
 				$('#TodoCancel'+setID).bind("click",Cancel);
+
+				
 
 				// $('.saved').click(function(){
 				// 	alert('evan');
@@ -42,15 +44,18 @@
 
 	function Save()
 	{
+		
+	
 		var row_index = $(this).closest('tr');
-		var setTodo = row_index.children("td:nth-child(1)");
-		var changeEdit = row_index.children("td:nth-child(2)");
-		var changeDone = row_index.children("td:nth-child(3)");
+		var changeIcon = row_index.children("td:nth-child(1)");
+		var setTodo = row_index.children("td:nth-child(2)");
+		var changeEdit = row_index.children("td:nth-child(3)");
+		var changeDone = row_index.children("td:nth-child(4)");
 
-
+		changeIcon.html('<img src="./saitama.jpg" class="circle responsive-img"></img>');
 		setTodo.html(setTodo.children("input[type=text]").val());
-		changeEdit.html("<input id=TodoEdit"+row_index.index()+" class='btn btn-info btn-lg' type='button' value='Edit'/>");
-		changeDone.html("<input id=TodoDone"+row_index.index()+" class='btn btn-info btn-lg' type='button' value='Done'/>");
+		changeEdit.html("<a id=TodoEdit"+row_index.index()+" class='waves-effect waves-light btn'><i class='fa fa-keyboard-o center fa-5x'></i></a>");
+		changeDone.html("<a class='waves-effect waves-light btn' id=TodoDone"+row_index.index()+"><i class='fa fa-check center'></i></a>");
 	
 
 		$("#TodoEdit"+row_index.index()).bind("click", Edit);
@@ -62,12 +67,15 @@
 	function Edit()
 	{
 		var row_index = $(this).closest('tr');
-		var editTodo = row_index.children("td:nth-child(1)");
-		var changeSave = row_index.children("td:nth-child(2)");
-		var changeDone = row_index.children("td:nth-child(3)");
+		var changeIcon = row_index.children("td:nth-child(1)");
+		var editTodo = row_index.children("td:nth-child(2)");
+		var changeSave = row_index.children("td:nth-child(3)");
+		var changeDone = row_index.children("td:nth-child(4)");
 
+		changeIcon.html('<img src="./serious.jpg" class="circle responsive-img test"></img>');
 		editTodo.html("<input type='text' value="+editTodo.html()+">");
-		changeSave.html("<input id=TodoSave"+row_index.index()+" class='btn btn-info btn-lg' type='button' value='Save'/>");
+		changeSave.html("<a class='waves-effect waves-light btn' id=TodoSave"+row_index.index()+"><i class='fa fa-floppy-o center'></i></a>");
+		changeDone.html("<span></span>");
 		$("#TodoSave"+row_index.index()).bind("click",Save);
 
 	}

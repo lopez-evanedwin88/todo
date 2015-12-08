@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "jquery": "~2.1.4",
-    "Materialize": "materialize#~0.97.3"
+    "Materialize": "materialize#~0.97.3",
+    "font-awesome": "git://github.com/FortAwesome/Font-Awesome.git#master"
   }
 }
