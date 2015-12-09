@@ -2,27 +2,64 @@
 	display: block;
 }
 
+
 .row .col.custom{
 	float: none;
 }
 
+html,body{
+    margin:0;
+    height:100%;
+}
+
+.custom-img{
+	width:75%;
+	position:fixed;
+	top: 0;
+	min-width: 50%;
+  	min-height: 50%;
+	z-index:-5000;
+}
 
 .btn, .btn-large, .btn-flat{
 	padding: 0 3rem;
 }
 
+.row .col.s3.custom-s3{
+	width: 40%;
+}
+
 .row .col.center{
 	width: 100%;
     text-align: center;
+    font-family: Roboto-Light;
+    font-size: 2rem;
+}
+
+.custom-height{
+	height: 100%;
+    margin: auto;
+    max-width: 150%;
 }
 
 img.responsive-img, video.responsive-video.stylelogo{
 	   margin-left: 30px;
 }
 
+.custom-container{
+	width: 100%;
+    max-width: 100%;
+    margin: auto;
+    height: 100%;
+}
+
+.todo-container{
+	width: 90%;
+}
+
 
 img.responsive-img.test{
-	max-width: 92%;
+	max-width: 90.8%;
 }
 
 
@@ -36,13 +73,15 @@ img.responsive-img.test{
 }
 
 input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea.margintext{
-	margin-left: 15px;
+	width: 50%;
+    font-size: 2rem;
+    resize:none;
 }
 
 
 nav .brand-logo.style{
 	text-decoration: line-through;
-	padding-left: 20px;
+	padding-left: 3.5rem;
 	font-family: robotFontThin;
 }
 
@@ -50,6 +89,10 @@ nav .brand-logo.style{
 	color: #c62828 ;
     padding-bottom: 450%;
     padding-top: 0;
+}
+
+.row .col.s7.todo-container{
+	width: 60%;
 }
 
 
